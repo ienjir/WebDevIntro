@@ -1,0 +1,40 @@
+/* Globale variablen die man dannach wiederverwenden kann. */
+:root {
+    --PrimaryColor: #12F7D6;
+    --BackgroundColor: #282C33;
+    --DivBackgroundColor: #3c4048;
+    --Text: #FFFFFF;
+}
+
+body, html {
+    overflow-x: hidden;
+    background: var(--BackgroundColor);
+    font-family: "Exo", sans-serif;
+    color: var(--Text);
+}
+
+h1 {
+    color: var(--PrimaryColor);
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Ist nicht umbedingt nötig, ich mache es aber immer, da man sich so nicht im body Zeug überscheibt/durcheinander kommt */
+.HauptDiv {
+    /* Alles mit flex */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    padding: 1rem;
+    text-align: center;
+}
+
+.WetterTagContainer {
+    display: flex;
+    flex: 1;
+    flex-wrap: wrap;
+    background: red;
+}

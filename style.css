@@ -1,0 +1,19 @@
+.EigeneKlasse {
+    color: red;
+}
+
+#EigeneID {
+    color: green;
+}
+
+h1 {
+    color: blue;
+}
+
+
+.ShowDiv {
+    height: 10rem;
+    width: 10rem;
+    background: red;
+    Display: none;
+}
