@@ -2,8 +2,10 @@
 APIRequestURL = "http://localhost:63342/untitled/Projekt/Beispiel_Response.json"
 Response = {}
 
-// API Request wenn die Seite geladen wird um die Wetterdaten herzubekommen
+// Diese Funktion führt Dinge bei laden der Seite aus
 document.addEventListener('DOMContentLoaded', function () {
+
+    // API Request wenn die Seite geladen wird um die Wetterdaten herzubekommen
     fetch(APIRequestURL)
         .then(response => response.json())
         .then(data => {
@@ -12,6 +14,22 @@ document.addEventListener('DOMContentLoaded', function () {
         .catch(error => {
             console.log('Fehler beim Abrufen der Daten:', error);
         });
+
+
+    // Dieser Teil rendert ein Div mit der Klasse "container" 5 mal
+    const container = document.getElementById("container");
+    // Anzahl der divs, die du darstellen möchtest
+    const divCount = 5;
+
+    for (let i = 0; i < divCount; i++) {
+        const div = document.createElement("div");
+        div.textContent = `Dies ist div Nummer ${i + 1}`;
+        div.style.border = "1px solid black";
+        div.style.margin = "5px";
+        div.style.padding = "10px";
+
+        container.appendChild(div);
+    }
 });
 
 /*
